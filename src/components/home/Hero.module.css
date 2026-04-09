@@ -1,0 +1,57 @@
+.hero {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding: 64px 0;
+}
+
+.hero__content {
+  max-width: 720px;
+}
+
+.hero__eyebrow {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  margin: 0 0 20px;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero__description {
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 96px 0;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 120px 0;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+}

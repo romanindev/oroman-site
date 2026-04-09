@@ -1,0 +1,10 @@
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}

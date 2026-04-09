@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header/Header';
+import Footer from '@/components/layout/Footer/Footer';
+import { ThemeProvider } from '@/design-system/theme';
+import styles from './layout.module.css'
 
 export const metadata: Metadata = {
   title: 'Roman | Senior Software Engineer',
@@ -15,13 +17,15 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
     <body>
-    <div className="site-shell">
-      <Header />
-      <main className="site-main">{children}</main>
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className={styles.shell}>
+        <Header />
+        <main className={styles.main}>{children}</main>
+        <Footer />
+      </div>
+    </ThemeProvider>
     </body>
     </html>
   );

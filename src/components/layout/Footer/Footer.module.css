@@ -1,0 +1,10 @@
+.footer {
+  border-top: 1px solid var(--border);
+}
+
+.footer__inner {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
