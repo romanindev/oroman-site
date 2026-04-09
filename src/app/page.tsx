@@ -1,8 +1,13 @@
-export default function Home() {
+import Container from '@/components/layout/Container';
+
+export default function HomePage() {
   return (
-    <main style={{ padding: 40 }}>
-      <h1>Roman — Senior Software Engineer</h1>
-      <p>Building reliable systems with React, TypeScript, and Node.js.</p>
-    </main>
+    <Container className="page-section">
+      <h1>Senior Software Engineer</h1>
+      <p>
+        I build reliable, maintainable products with a strong focus on React,
+        TypeScript, Node.js, and full-stack engineering.
+      </p>
+    </Container>
   );
 }
