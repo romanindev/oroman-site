@@ -22,13 +22,13 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Remote',
     employmentType: 'Full-time / Contract',
     responsibilities: [
-      'Improved codebase maintainability by aligning implementation with modern best practices and cleaning architecture principles',
+      'Improved codebase maintainability by aligning implementation with modern best practices and clean architecture principles',
       'Developed UI components and migrated legacy forms to a Figma-based design system',
       'Introduced and configured code quality tools (ESLint, Prettier, Husky), improving consistency and developer experience',
       'Built and extended frontend features using React and Redux Toolkit, with a focus on maintainability and testability',
       'Improved data fetching strategy by introducing React Query, reducing backend load through caching and query invalidation',
-      'Contributed to system architecture and technical decision-making across frontend and backend',
-      'Utilized AWS services (e.g., S3, EC2) as part of application development and deployment',
+      'Participated in system architecture and technical decisions across frontend and backend',
+      'Integrated AWS services (e.g., S3, EC2) into application development and deployment workflows',
       'Increased system reliability by adding test coverage for critical application flows',
     ],
     skills: [
