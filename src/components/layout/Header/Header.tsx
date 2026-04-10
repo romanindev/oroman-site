@@ -1,11 +1,13 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import Container from '../Container/Container';
 import ThemeToggle from '@/design-system/components/ThemeToggle/ThemeToggle';
-import styles from './Header.module.css'
+import IconButton from '@/design-system/components/IconButton/IconButton';
+import styles from './Header.module.css';
 
 const navigation = [
   { href: '/#about', label: 'About' },
@@ -14,9 +16,38 @@ const navigation = [
   { href: '/projects', label: 'Projects' },
 ];
 
+function MenuIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+      <path d="M6 6l12 12" />
+      <path d="M18 6 6 18" />
+    </svg>
+  );
+}
+
 export default function Header() {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const [openMenuPath, setOpenMenuPath] = useState<string | null>(null);
+  const isMenuOpen = openMenuPath === pathname;
+
+  const toggleMenu = () => {
+    setOpenMenuPath((current) => (current === pathname ? null : pathname));
+  };
+
+  const closeMenu = () => {
+    setOpenMenuPath(null);
+  };
 
   const handleScrollToTop = () => {
     if (window.location.hash) {
@@ -24,6 +55,28 @@ export default function Header() {
     }
 
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMenu();
+  };
+
+  const renderNavLink = (
+    item: { href: string; label: string },
+    className: string,
+  ) => {
+    const isHomeAnchor = item.href.startsWith('/#');
+
+    if (isHomeAnchor && isHomePage) {
+      return (
+        <a href={item.href.replace('/', '')} className={className} onClick={closeMenu}>
+          {item.label}
+        </a>
+      );
+    }
+
+    return (
+      <Link href={item.href} className={className} onClick={closeMenu}>
+        {item.label}
+      </Link>
+    );
   };
 
   return (
@@ -31,10 +84,10 @@ export default function Header() {
       <Container className={styles.header__inner}>
         {isHomePage ? (
           <button
+            type="button"
             onClick={handleScrollToTop}
             className={styles.logo}
             aria-label="Scroll to top"
-            type="button"
           >
             oroman.dev
           </button>
@@ -44,43 +97,75 @@ export default function Header() {
           </Link>
         )}
 
-        <div className={styles.header__actions}>
-          <nav aria-label="Primary navigation">
-            <ul className={styles.nav}>
+        <div className={styles.controls}>
+          <nav className={styles.desktopNav} aria-label="Primary navigation">
+            <ul className={styles.desktopNavList}>
               <li>
                 {isHomePage ? (
                   <button
-                    onClick={handleScrollToTop}
-                    className={styles.nav__link}
                     type="button"
+                    onClick={handleScrollToTop}
+                    className={styles.desktopNavLink}
                   >
                     Home
                   </button>
                 ) : (
-                  <Link href="/" className={styles.nav__link}>
+                  <Link href="/" className={styles.desktopNavLink}>
                     Home
                   </Link>
                 )}
               </li>
+
               {navigation.map((item) => (
-                <li key={item.href}>
-                  {isHomePage ? (
-                    <a href={item.href} className={styles.nav__link}>
-                      {item.label}
-                    </a>
-                  ) : (
-                    <Link href={item.href} className={styles.nav__link}>
-                      {item.label}
-                    </Link>
-                  )}
-                </li>
+                <li key={item.href}>{renderNavLink(item, styles.desktopNavLink)}</li>
               ))}
             </ul>
           </nav>
 
           <ThemeToggle />
+
+          <IconButton
+            className={styles.mobileMenuButton}
+            ariaLabel={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            ariaExpanded={isMenuOpen}
+            ariaControls="mobile-navigation"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+          </IconButton>
         </div>
       </Container>
+
+      <div
+        id="mobile-navigation"
+        className={`${styles.mobilePanel} ${isMenuOpen ? styles['mobilePanel--open'] : ''}`}
+      >
+        <Container>
+          <nav aria-label="Mobile navigation">
+            <ul className={styles.mobileNavList}>
+              <li>
+                {isHomePage ? (
+                  <button
+                    type="button"
+                    onClick={handleScrollToTop}
+                    className={styles.mobileNavLink}
+                  >
+                    Home
+                  </button>
+                ) : (
+                  <Link href="/" className={styles.mobileNavLink} onClick={closeMenu}>
+                    Home
+                  </Link>
+                )}
+              </li>
+
+              {navigation.map((item) => (
+                <li key={item.href}>{renderNavLink(item, styles.mobileNavLink)}</li>
+              ))}
+            </ul>
+          </nav>
+        </Container>
+      </div>
     </header>
   );
 }
