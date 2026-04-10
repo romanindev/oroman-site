@@ -7,8 +7,9 @@ export function About() {
     <Section id="about">
       <div className={styles.about}>
         <SectionHeading
-          title="About"
-          description="A concise introduction to how I think, build, and approach engineering."
+          eyebrow="About"
+          title="Engineering mindset with strong frontend depth"
+          description="A frontend-focused software engineer with a strong full-stack mindset and a pragmatic approach to building maintainable products."
         />
 
         <div className={styles.content}>

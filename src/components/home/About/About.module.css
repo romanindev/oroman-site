@@ -1,44 +1,45 @@
 .about {
   display: grid;
-  gap: 1.5rem;
+  gap: var(--space-6);
 }
 
 .content {
   display: grid;
-  gap: 1.25rem;
+  gap: var(--space-5);
 }
 
 .lead {
   margin: 0;
-  max-width: 68ch;
-  font-size: 1.125rem;
+  max-width: var(--content-readable);
+  font-size: var(--text-lg);
   line-height: 1.7;
   color: var(--foreground);
+  text-wrap: pretty;
 }
 
 .body {
   display: grid;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .body p {
   margin: 0;
   max-width: 72ch;
-  font-size: 1rem;
+  font-size: var(--text-base);
   line-height: 1.8;
   color: var(--muted);
 }
 
 @media (min-width: 768px) {
   .about {
-    gap: 2rem;
+    gap: var(--space-8);
   }
 
   .content {
-    gap: 1.5rem;
+    gap: var(--space-6);
   }
 
   .lead {
-    font-size: 1.25rem;
+    font-size: var(--text-xl);
   }
 }

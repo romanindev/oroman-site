@@ -1,24 +1,24 @@
 .section {
-  padding: 3rem 0;
+  padding: var(--space-12) 0;
   scroll-margin-top: 64px;
 }
 
 .section__inner {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: var(--space-8);
 }
 
 
 @media (min-width: 768px) {
   .section {
-    padding: 4rem 0;
+    padding: var(--space-16) 0;
     scroll-margin-top: 73px;
   }
 }
 
 @media (min-width: 1024px) {
   .section {
-    padding: 5rem 0;
+    padding: var(--space-20) 0;
   }
 }
