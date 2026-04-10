@@ -1,0 +1,15 @@
+.content {
+  max-width: 720px;
+  margin-top: var(--space-6);
+}
+
+.content p {
+  margin: 0 0 var(--space-4);
+  line-height: 1.7;
+  color: var(--foreground);
+}
+
+.content a {
+  color: var(--foreground);
+  text-decoration: underline;
+}
