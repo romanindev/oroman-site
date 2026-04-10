@@ -44,17 +44,15 @@ export function FeaturedProject() {
                 The first package, <strong>@dfsync/client</strong>, is a lightweight HTTP client built for reliable communication with retries, hooks, and built-in request observability in Node.js.
               </p>
 
-              <div className={styles.meta}>
-                <div className={styles.block}>
-                  <h4 className={styles.blockTitle}>Key capabilities</h4>
-                  <ul className={styles.list}>
-                    {highlights.map((item) => (
-                      <li key={item} className={styles.listItem}>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className={styles.block}>
+                <h4 className={styles.blockTitle}>Key capabilities</h4>
+                <ul className={styles.list}>
+                  {highlights.map((item) => (
+                    <li key={item} className={styles.listItem}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className={styles.block}>

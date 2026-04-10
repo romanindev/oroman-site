@@ -60,11 +60,6 @@
   color: var(--muted);
 }
 
-.meta {
-  display: grid;
-  gap: var(--space-5);
-}
-
 .block {
   display: grid;
   gap: var(--space-3);
@@ -132,10 +127,6 @@
 
   .title {
     font-size: 1.75rem;
-  }
-
-  .meta {
-    gap: var(--space-6);
   }
 
   .actions {
