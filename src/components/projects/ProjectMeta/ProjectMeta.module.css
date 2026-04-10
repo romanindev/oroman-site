@@ -1,0 +1,55 @@
+.meta {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.group {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: 1.4;
+  color: var(--foreground);
+}
+
+.details {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.detailItem {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.value {
+  margin: 0;
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--foreground);
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
