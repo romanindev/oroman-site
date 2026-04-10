@@ -5,19 +5,18 @@ import Chip from '@/design-system/components/Chip/Chip';
 import styles from './FeaturedProject.module.css';
 
 const highlights = [
-  'Typed responses and automatic JSON parsing',
-  'Built-in retry with configurable policies',
-  'Lifecycle hooks for request control and observability',
-  'Structured error handling for production scenarios',
+  'Built for microservices, internal APIs, worker processes, and external integrations',
+  'A clean, predictable HTTP client setup without repeating the same boilerplate in every project',
+  'Built-in support for bearer tokens, API keys, and custom auth flows',
+  'Built-in retry policies with Retry-After support and full retry visibility',
+  'Lifecycle hooks including beforeRequest, afterResponse, onError, and onRetry',
+  'Built-in request visibility with timing, retry metadata, and lifecycle insights',
+  'Every request follows a clear, controllable lifecycle with full visibility into execution and retries',
 ];
 
 const techStack = [
   'TypeScript',
   'Node.js',
-  'HTTP / Fetch',
-  'Tsup',
-  'Vitest',
-  'PNPM monorepo',
 ];
 
 export function FeaturedProject() {
@@ -36,18 +35,13 @@ export function FeaturedProject() {
               <p className={styles.eyebrow}>Open Source</p>
               <h3 className={styles.title}>dfsync</h3>
               <p className={styles.subtitle}>
-                A lightweight and reliable HTTP client for service-to-service
-                communication in Node.js and TypeScript.
+                Reliable toolkit for service-to-service communication. Built for backend services, microservices, and internal APIs.
               </p>
             </div>
 
             <div className={styles.body}>
               <p className={styles.description}>
-                Built for backend services, microservices, and internal APIs,
-                dfsync focuses on predictable networking behavior, consistent
-                error handling, and a clear request lifecycle. It represents the
-                kind of engineering work I care about: reliability,
-                maintainability, and production-ready developer experience.
+                The first package, <strong>@dfsync/client</strong>, is a lightweight HTTP client built for reliable communication with retries, hooks, and built-in request observability in Node.js.
               </p>
 
               <div className={styles.meta}>
@@ -61,17 +55,17 @@ export function FeaturedProject() {
                     ))}
                   </ul>
                 </div>
+              </div>
 
-                <div className={styles.block}>
-                  <h4 className={styles.blockTitle}>Stack</h4>
-                  <ul className={styles.tags} aria-label="Project tech stack">
-                    {techStack.map((tag) => (
-                      <li key={tag}>
-                        <Chip>{tag}</Chip>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className={styles.block}>
+                <h4 className={styles.blockTitle}>Stack</h4>
+                <ul className={styles.tags} aria-label="Project tech stack">
+                  {techStack.map((tag) => (
+                    <li key={tag}>
+                      <Chip>{tag}</Chip>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

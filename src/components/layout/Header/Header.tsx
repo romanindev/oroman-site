@@ -36,11 +36,11 @@ export default function Header() {
             aria-label="Scroll to top"
             type="button"
           >
-            oroman.dev
+            oroman.dev (WIP)
           </button>
         ) : (
           <Link href="/" className={styles.logo}>
-            oroman.dev
+            oroman.dev (WIP)
           </Link>
         )}
 

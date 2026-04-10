@@ -55,7 +55,6 @@
 
 .description {
   margin: 0;
-  max-width: 70ch;
   font-size: var(--text-base);
   line-height: 1.8;
   color: var(--muted);
@@ -136,7 +135,6 @@
   }
 
   .meta {
-    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     gap: var(--space-6);
   }
 

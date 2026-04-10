@@ -45,7 +45,7 @@ export function ExperienceItem({ item }: ExperienceItemProps) {
         </div>
 
         <div className={styles.block}>
-          <h3 className={styles.blockTitle}>Skills</h3>
+          <h3 className={styles.blockTitle}>Technologies & Skills</h3>
           <ul className={styles.tags}>
             {item.skills.map((skill) => (
               <li key={skill}>
