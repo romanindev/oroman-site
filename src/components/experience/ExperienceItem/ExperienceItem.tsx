@@ -31,7 +31,9 @@ export function ExperienceItem({ item }: ExperienceItemProps) {
       </header>
 
       <div className={styles.content}>
-        <p className={styles.summary}>{item.summary}</p>
+        {item.summary && (
+          <p className={styles.summary}>{item.summary}</p>
+        )}
 
         <div className={styles.block}>
           <h3 className={styles.blockTitle}>Responsibilities</h3>
