@@ -24,8 +24,9 @@ export function FeaturedProject() {
     <Section id="projects">
       <div className={styles.featuredProject}>
         <SectionHeading
+          eyebrow="Projects"
           title="Featured Project"
-          description="A selected open-source project that reflects my engineering approach and product thinking."
+          description="A closer look at projects that reflect my engineering approach, product thinking, and interest in reliability."
         />
 
         <article className={styles.card}>
@@ -76,7 +77,14 @@ export function FeaturedProject() {
 
           <div className={styles.actions}>
             <Button
+              href="https://www.npmjs.com/package/@dfsync/client"
+              external
+            >
+              View on NPM
+            </Button>
+            <Button
               href="https://dfsyncjs.github.io/#/docs"
+              variant="secondary"
               external
             >
               View Docs

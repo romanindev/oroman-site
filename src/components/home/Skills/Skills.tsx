@@ -62,7 +62,8 @@ export function Skills() {
     <Section id="skills">
       <div className={styles.skills}>
         <SectionHeading
-          title="Skills"
+          eyebrow="Skills"
+          title="Core technologies and areas I work with"
           description="A focused view of the technologies, practices, and systems I use to build modern web products."
         />
 

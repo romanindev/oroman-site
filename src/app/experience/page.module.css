@@ -1,0 +1,17 @@
+.page {
+  padding: var(--space-12) 0 var(--space-16);
+}
+
+.hero {
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: var(--space-16) 0 var(--space-20);
+  }
+
+  .hero {
+    margin-bottom: var(--space-10);
+  }
+}

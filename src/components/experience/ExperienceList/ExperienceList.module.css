@@ -1,0 +1,10 @@
+.list {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .list {
+    gap: var(--space-8);
+  }
+}

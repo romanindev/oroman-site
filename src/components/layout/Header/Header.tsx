@@ -8,9 +8,10 @@ import ThemeToggle from '@/design-system/components/ThemeToggle/ThemeToggle';
 import styles from './Header.module.css'
 
 const navigation = [
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
+  { href: '/#about', label: 'About' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/projects', label: 'Projects' },
 ];
 
 export default function Header() {
@@ -18,7 +19,10 @@ export default function Header() {
   const isHomePage = pathname === '/';
 
   const handleScrollToTop = () => {
-    window.history.replaceState(null, '', '/');
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -30,6 +34,7 @@ export default function Header() {
             onClick={handleScrollToTop}
             className={styles.logo}
             aria-label="Scroll to top"
+            type="button"
           >
             oroman.dev
           </button>
@@ -47,6 +52,7 @@ export default function Header() {
                   <button
                     onClick={handleScrollToTop}
                     className={styles.nav__link}
+                    type="button"
                   >
                     Home
                   </button>
@@ -63,7 +69,7 @@ export default function Header() {
                       {item.label}
                     </a>
                   ) : (
-                    <Link href={`/${item.href}`} className={styles.nav__link}>
+                    <Link href={item.href} className={styles.nav__link}>
                       {item.label}
                     </Link>
                   )}
