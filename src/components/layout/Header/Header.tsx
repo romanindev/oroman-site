@@ -1,31 +1,72 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
 import Container from '../Container/Container';
 import ThemeToggle from '@/design-system/components/ThemeToggle/ThemeToggle';
 import styles from './Header.module.css'
 
 const navigation = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/experience', label: 'Experience' },
-  { href: '/projects', label: 'Projects' },
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
+  const handleScrollToTop = () => {
+    window.history.replaceState(null, '', '/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={styles.header}>
       <Container className={styles.header__inner}>
-        <Link href="/" className={styles.logo} aria-label="Go to homepage">
-          oroman.dev
-        </Link>
+        {isHomePage ? (
+          <button
+            onClick={handleScrollToTop}
+            className={styles.logo}
+            aria-label="Scroll to top"
+          >
+            oroman.dev
+          </button>
+        ) : (
+          <Link href="/" className={styles.logo}>
+            oroman.dev
+          </Link>
+        )}
 
         <div className={styles.header__actions}>
           <nav aria-label="Primary navigation">
             <ul className={styles.nav}>
+              <li>
+                {isHomePage ? (
+                  <button
+                    onClick={handleScrollToTop}
+                    className={styles.nav__link}
+                  >
+                    Home
+                  </button>
+                ) : (
+                  <Link href="/" className={styles.nav__link}>
+                    Home
+                  </Link>
+                )}
+              </li>
               {navigation.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className={styles.nav__link}>
-                    {item.label}
-                  </Link>
+                  {isHomePage ? (
+                    <a href={item.href} className={styles.nav__link}>
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link href={`/${item.href}`} className={styles.nav__link}>
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

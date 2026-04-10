@@ -30,9 +30,20 @@
   padding: 0;
 }
 
+.nav__link,
+.logo {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
 .nav__link {
   color: var(--muted);
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
 .nav__link:hover {
@@ -43,6 +54,7 @@
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

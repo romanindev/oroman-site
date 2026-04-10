@@ -2,7 +2,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import styles from './Button.module.css';
 
-type ButtonVariant = 'primary' | 'ghost';
+type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 
 type BaseProps = {
   children: React.ReactNode;

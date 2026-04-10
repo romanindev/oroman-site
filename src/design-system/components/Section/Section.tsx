@@ -5,11 +5,12 @@ import styles from './Section.module.css';
 type SectionProps = {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 };
 
-export default function Section({ children, className }: SectionProps) {
+export default function Section({ id, children, className }: SectionProps) {
   return (
-    <section className={clsx(styles.section, className)}>
+    <section id={id} className={clsx(styles.section, className)}>
       <Container className={styles.section__inner}>{children}</Container>
     </section>
   );

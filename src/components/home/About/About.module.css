@@ -1,0 +1,44 @@
+.about {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.content {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.lead {
+  margin: 0;
+  max-width: 68ch;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--foreground);
+}
+
+.body {
+  display: grid;
+  gap: 1rem;
+}
+
+.body p {
+  margin: 0;
+  max-width: 72ch;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  .about {
+    gap: 2rem;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+  }
+}

@@ -40,3 +40,14 @@
 .button--ghost:hover {
   background: var(--surface);
 }
+
+.button--secondary {
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.button--secondary:hover {
+  background: var(--surface);
+  border-color: var(--foreground);
+}
