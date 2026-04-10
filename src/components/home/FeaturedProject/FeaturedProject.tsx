@@ -1,6 +1,7 @@
 import Button from '@/design-system/components/Button/Button';
 import Section from '@/design-system/components/Section/Section';
 import SectionHeading from '@/design-system/components/SectionHeading/SectionHeading';
+import Chip from '@/design-system/components/Chip/Chip';
 import styles from './FeaturedProject.module.css';
 
 const highlights = [
@@ -64,9 +65,9 @@ export function FeaturedProject() {
                 <div className={styles.block}>
                   <h4 className={styles.blockTitle}>Stack</h4>
                   <ul className={styles.tags} aria-label="Project tech stack">
-                    {techStack.map((item) => (
-                      <li key={item} className={styles.tag}>
-                        {item}
+                    {techStack.map((tag) => (
+                      <li key={tag}>
+                        <Chip>{tag}</Chip>
                       </li>
                     ))}
                   </ul>

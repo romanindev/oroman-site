@@ -1,5 +1,6 @@
 import styles from './ExperienceItem.module.css';
 import type { ExperienceEntry } from '@/data/experience';
+import Chip from '@/design-system/components/Chip/Chip';
 
 type ExperienceItemProps = {
   item: ExperienceEntry;
@@ -47,8 +48,8 @@ export function ExperienceItem({ item }: ExperienceItemProps) {
           <h3 className={styles.blockTitle}>Skills</h3>
           <ul className={styles.tags}>
             {item.skills.map((skill) => (
-              <li key={skill} className={styles.tag}>
-                {skill}
+              <li key={skill}>
+                <Chip>{skill}</Chip>
               </li>
             ))}
           </ul>
