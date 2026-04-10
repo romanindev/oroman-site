@@ -1,17 +1,14 @@
 'use client';
 
-import { usePathname, useSearchParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 export function useAnalytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const url = pathname + '?' + searchParams.toString();
-
     window.gtag?.('config', process.env.NEXT_PUBLIC_GA_ID, {
-      page_path: url,
+      page_path: pathname,
     });
-  }, [pathname, searchParams]);
+  }, [pathname]);
 }
