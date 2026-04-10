@@ -22,17 +22,14 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Remote',
     employmentType: 'Full-time / Contract',
     responsibilities: [
-      'Improving codebase maintainability by aligning implementation with modern best practices and cleaning architecture principles',
-      'Developing UI components and migrating legacy forms to a Figma-based design system using React and TypeScript',
-      'Introducing and configuring code quality tools (ESLint, Prettier, Husky), improving consistency and developer experience',
-      'Building and extending frontend features using React and Redux Toolkit, with a focus on maintainability and testability',
-      'Improving data fetching strategy by introducing React Query, reducing backend load through caching and query invalidation',
-      'Contributing to system architecture and technical decision-making across frontend and backend',
-      'Contributing to backend development by implementing API endpoints, middleware, and services improving data validation and processing flows',
-      'Working with PostgreSQL and MongoDB (via Mongoose) for data modeling and persistence',
-      'Utilizing AWS services (e.g., S3, EC2) as part of application development and deployment',
-      'Increasing system reliability by adding test coverage for critical application flows',
-      'Collaborating with cross-functional teams, including product, design, and backend engineers'
+      'Improved codebase maintainability by aligning implementation with modern best practices and cleaning architecture principles',
+      'Developed UI components and migrated legacy forms to a Figma-based design system',
+      'Introduced and configured code quality tools (ESLint, Prettier, Husky), improving consistency and developer experience',
+      'Built and extended frontend features using React and Redux Toolkit, with a focus on maintainability and testability',
+      'Improved data fetching strategy by introducing React Query, reducing backend load through caching and query invalidation',
+      'Contributed to system architecture and technical decision-making across frontend and backend',
+      'Utilized AWS services (e.g., S3, EC2) as part of application development and deployment',
+      'Increased system reliability by adding test coverage for critical application flows',
     ],
     skills: [
       'React',
@@ -40,11 +37,8 @@ export const experienceEntries: ExperienceEntry[] = [
       'Node.js',
       'Redux Toolkit',
       'React Query',
-      'PostgreSQL',
-      'MongoDB',
-      'MUI',
       'API Integration',
-      'AWS',
+      'AWS / DB',
     ],
   },
   {
@@ -59,7 +53,7 @@ export const experienceEntries: ExperienceEntry[] = [
       'Developed and maintained a CMS platform for data collection and analysis',
       'Refactored legacy React/JavaScript code, improving maintainability',
       'Built reusable UI components, reducing duplication and speeding up feature delivery',
-      'Validated critical flows through manual testing',
+      'Improved code quality through refactoring',
     ],
     skills: [
       'React',
@@ -78,7 +72,7 @@ export const experienceEntries: ExperienceEntry[] = [
     employmentType: 'Full-time / Contract',
     responsibilities: [
       'Developed and maintained a web-based reading platform, focused on usability and performance of content-heavy pages',
-      'Implemented new features using React and JavaScript, improving user experience and functionality of the application',
+      'Built and maintained frontend features using React and TypeScript, improving user experience and functionality of the application',
       'Optimized rendering and interaction patterns for a smoother reading experience across devices',
       'Wrote unit tests and performed manual testing to ensure stability of core user flows',
       'Contributed to ongoing improvements of code quality and maintainability within the frontend codebase'

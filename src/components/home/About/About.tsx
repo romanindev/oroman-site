@@ -9,7 +9,7 @@ export function About() {
         <SectionHeading
           eyebrow="About"
           title="Engineering mindset with strong frontend depth"
-          description="A frontend-focused software engineer with a strong full-stack mindset and a pragmatic approach to building maintainable products."
+          description="Worked on front-end development and full-stack development to create products that are easy to maintain."
         />
 
         <div className={styles.content}>
