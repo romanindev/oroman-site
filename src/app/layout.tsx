@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import './globals.css';
 import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
 import { ThemeProvider } from '@/design-system/theme';
+import { AnalyticsProvider } from '@/providers/AnalyticsProvider';
+import './globals.css';
 import styles from './layout.module.css';
 
 export const metadata: Metadata = {
@@ -22,13 +23,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
-        <ThemeProvider>
-          <div className={styles.shell}>
-            <Header />
-            <main className={styles.main}>{children}</main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <AnalyticsProvider>
+          <ThemeProvider>
+            <div className={styles.shell}>
+              <Header />
+              <main className={styles.main}>{children}</main>
+              <Footer />
+            </div>
+          </ThemeProvider>
+        </AnalyticsProvider>
 
         {GA_ID && (
           <>
