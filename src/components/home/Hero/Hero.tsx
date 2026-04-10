@@ -9,20 +9,17 @@ export function Hero() {
         <div className={styles.hero__content}>
           <p className={styles.hero__eyebrow}>Senior Software Engineer</p>
 
-          <h1 className={styles.hero__title}>
-            Building reliable, scalable systems with a frontend focus
-          </h1>
+          <h1 className={styles.hero__title}>Building reliable, scalable systems with a frontend focus</h1>
 
           <p className={styles.hero__description}>
-            I specialize in React, TypeScript, and Node.js, with a strong
-            full-stack mindset and focus on performance, maintainability,
-            and system reliability.
+            I specialize in React, TypeScript, and Node.js, with a strong full-stack mindset and focus on performance,
+            maintainability, and system reliability.
           </p>
 
           <div className={styles.hero__actions}>
-            <Button href="/projects">View Projects</Button>
-            <Button href="/#contact" variant="ghost">
-              Contact Me
+            <Button href="/experience">Experience</Button>
+            <Button href="https://www.linkedin.com/in/onishchenko-roman" variant="ghost" external>
+              Connect on LinkedIn
             </Button>
           </div>
         </div>
