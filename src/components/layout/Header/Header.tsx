@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 import Container from '../Container/Container';
@@ -58,10 +59,9 @@ export default function Header() {
     closeMenu();
   };
 
-  const renderNavLink = (
-    item: { href: string; label: string },
-    className: string,
-  ) => {
+  const Logo = <Image className={styles.logo} src="/logo.png" alt="logo" width={52} height={52} />;
+
+  const renderNavLink = (item: { href: string; label: string }, className: string) => {
     const isHomeAnchor = item.href.startsWith('/#');
 
     if (isHomeAnchor && isHomePage) {
@@ -83,17 +83,12 @@ export default function Header() {
     <header className={styles.header}>
       <Container className={styles.header__inner}>
         {isHomePage ? (
-          <button
-            type="button"
-            onClick={handleScrollToTop}
-            className={styles.logo}
-            aria-label="Scroll to top"
-          >
-            oroman.dev
+          <button type="button" onClick={handleScrollToTop} className={styles.logo} aria-label="Scroll to top">
+            {Logo}
           </button>
         ) : (
           <Link href="/" className={styles.logo}>
-            oroman.dev
+            {Logo}
           </Link>
         )}
 
@@ -102,11 +97,7 @@ export default function Header() {
             <ul className={styles.desktopNavList}>
               <li>
                 {isHomePage ? (
-                  <button
-                    type="button"
-                    onClick={handleScrollToTop}
-                    className={styles.desktopNavLink}
-                  >
+                  <button type="button" onClick={handleScrollToTop} className={styles.desktopNavLink}>
                     Home
                   </button>
                 ) : (
@@ -136,20 +127,13 @@ export default function Header() {
         </div>
       </Container>
 
-      <div
-        id="mobile-navigation"
-        className={`${styles.mobilePanel} ${isMenuOpen ? styles['mobilePanel--open'] : ''}`}
-      >
+      <div id="mobile-navigation" className={`${styles.mobilePanel} ${isMenuOpen ? styles['mobilePanel--open'] : ''}`}>
         <Container>
           <nav aria-label="Mobile navigation">
             <ul className={styles.mobileNavList}>
               <li>
                 {isHomePage ? (
-                  <button
-                    type="button"
-                    onClick={handleScrollToTop}
-                    className={styles.mobileNavLink}
-                  >
+                  <button type="button" onClick={handleScrollToTop} className={styles.mobileNavLink}>
                     Home
                   </button>
                 ) : (

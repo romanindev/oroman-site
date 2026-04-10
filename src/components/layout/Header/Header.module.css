@@ -28,9 +28,8 @@
 }
 
 .logo {
-  font-size: var(--text-base);
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  width: 52px;
+  height: 52px;
   cursor: pointer;
 }
 
@@ -126,5 +125,9 @@
 
   .mobilePanel {
     display: none !important;
+  }
+  .logo {
+    width: 58px;
+    height: 58px;
   }
 }
