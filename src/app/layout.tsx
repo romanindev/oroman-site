@@ -8,9 +8,16 @@ import './globals.css';
 import styles from './layout.module.css';
 
 export const metadata: Metadata = {
-  title: 'Roman | Senior Software Engineer',
+  metadataBase: new URL('https://oroman.dev'),
+  title: {
+    default: 'Roman Onishchenko | Software Engineer',
+    template: '%s | Roman Onishchenko',
+  },
   description:
     'Personal portfolio of a Senior Software Engineer focused on React, TypeScript, Node.js, full-stack engineering, and open-source.',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 type RootLayoutProps = {

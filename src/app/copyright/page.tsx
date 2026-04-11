@@ -1,7 +1,16 @@
+import type { Metadata } from 'next';
+
 import Container from '@/components/layout/Container/Container';
 import Section from '@/design-system/components/Section/Section';
 import SectionHeading from '@/design-system/components/SectionHeading/SectionHeading';
 import styles from './page.module.css';
+
+export const metadata: Metadata = {
+  title: 'Copyright',
+  alternates: {
+    canonical: '/copyright',
+  },
+};
 
 export default function CopyrightPage() {
   return (
