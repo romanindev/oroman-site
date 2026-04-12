@@ -40,6 +40,15 @@
   transition: opacity 0.2s ease;
 }
 
+button.link {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
 .link:hover {
   opacity: 0.7;
 }

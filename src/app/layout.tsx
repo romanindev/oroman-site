@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header/Header';
 import Footer from '@/components/layout/Footer/Footer';
 import { ThemeProvider } from '@/design-system/theme';
 import { AnalyticsProvider } from '@/providers/AnalyticsProvider';
+import { CookieBanner } from '@/components/analytics/CookieBanner/CookieBanner';
 import { publicConfig } from '@/config/public';
 import './globals.css';
 import styles from './layout.module.css';
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <ThemeProvider>
           <AnalyticsProvider />
+          <CookieBanner />
           <div className={styles.shell}>
             <Header />
             <main className={styles.main}>{children}</main>
@@ -43,15 +45,25 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
         {GA_ID && (
           <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
-            <Script id="ga-script" strategy="afterInteractive">
+            {/* Runs before GA loads: initialises dataLayer/gtag and sets consent from localStorage */}
+            <Script id="ga-consent-init" strategy="beforeInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_ID}', {
-                  page_path: window.location.pathname,
+                var _c = null;
+                try { _c = localStorage.getItem('ga-consent'); } catch(e) {}
+                gtag('consent', 'default', {
+                  analytics_storage: _c === 'granted' ? 'granted' : 'denied',
+                  ad_storage: 'denied',
+                  wait_for_update: 500
                 });
+              `}
+            </Script>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+            <Script id="ga-config" strategy="afterInteractive">
+              {`
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}', { send_page_view: false });
               `}
             </Script>
           </>
