@@ -1,7 +1,12 @@
 import type { AnalyticsEvent, AnalyticsEventParams, AnalyticsProvider } from './types';
+import { publicConfig } from '@/config/public';
 
 export class Analytics {
   private static provider: AnalyticsProvider | null = null;
+
+  static get isEnabled(): boolean {
+    return !!publicConfig.gaId;
+  }
 
   static init(provider: AnalyticsProvider): void {
     this.provider = provider;
@@ -30,6 +35,14 @@ export class Analytics {
       location: params.location,
       link_url: params.linkUrl,
       label: params.label,
+    });
+  }
+
+  static updateConsent(granted: boolean): void {
+    if (typeof window === 'undefined' || typeof window.gtag !== 'function') return;
+
+    window.gtag('consent', 'update', {
+      analytics_storage: granted ? 'granted' : 'denied',
     });
   }
 }

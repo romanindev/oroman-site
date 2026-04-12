@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Container from '@/components/layout/Container/Container';
 import { TrackedLink } from '@/components/analytics/TrackedLink';
+import { CookiePreferencesButton } from './CookiePreferencesButton';
+import { Analytics } from '@/lib/analytics';
 import styles from './Footer.module.css';
 
 const links = [
@@ -39,6 +41,12 @@ export default function Footer() {
                   </TrackedLink>
                 </li>
               ))}
+
+              {Analytics.isEnabled && (
+                <li>
+                  <CookiePreferencesButton className={styles.link} />
+                </li>
+              )}
 
               <li>
                 <Link href="/copyright" className={styles.link}>
