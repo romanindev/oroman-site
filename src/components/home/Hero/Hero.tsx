@@ -1,6 +1,6 @@
 import Section from '@/design-system/components/Section/Section';
-import Button from '@/design-system/components/Button/Button';
 import styles from './Hero.module.css';
+import { HeroActions } from '@/components/home/Hero/HeroActions';
 
 export function Hero() {
   return (
@@ -17,10 +17,7 @@ export function Hero() {
           </p>
 
           <div className={styles.hero__actions}>
-            <Button href="/experience">Experience</Button>
-            <Button href="https://www.linkedin.com/in/onishchenko-roman" variant="ghost" external>
-              Connect on LinkedIn
-            </Button>
+            <HeroActions />
           </div>
         </div>
       </div>

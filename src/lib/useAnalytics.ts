@@ -2,13 +2,15 @@
 
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
+import { publicConfig } from '@/config/public';
+import { Analytics } from '@/lib/analytics';
 
 export function useAnalytics() {
   const pathname = usePathname();
 
   useEffect(() => {
-    window.gtag?.('config', process.env.NEXT_PUBLIC_GA_ID, {
-      page_path: pathname,
-    });
+    if (!publicConfig.gaId) return;
+
+    Analytics.trackPageView(pathname);
   }, [pathname]);
 }

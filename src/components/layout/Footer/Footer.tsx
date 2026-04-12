@@ -1,16 +1,13 @@
 import Link from 'next/link';
-import styles from './Footer.module.css';
 import Container from '@/components/layout/Container/Container';
+import { TrackedLink } from '@/components/analytics/TrackedLink';
+import styles from './Footer.module.css';
 
 const links = [
   {
     href: 'https://www.linkedin.com/in/onishchenko-roman',
     label: 'LinkedIn',
   },
-  // {
-  //   href: 'https://github.com/YOUR_GITHUB',
-  //   label: 'GitHub',
-  // },
   {
     href: 'https://x.com/boredexill',
     label: 'X',
@@ -30,9 +27,16 @@ export default function Footer() {
             <ul className={styles.links}>
               {links.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} target="_blank" rel="noreferrer" className={styles.link}>
+                  <TrackedLink
+                    href={link.href}
+                    label={link.label}
+                    location="footer"
+                    className={styles.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {link.label}
-                  </Link>
+                  </TrackedLink>
                 </li>
               ))}
 

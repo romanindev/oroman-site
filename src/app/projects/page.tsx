@@ -7,9 +7,11 @@ import { projects } from '@/data/projects';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Projects | Roman',
-  description:
-    'Selected projects that reflect my engineering approach, product thinking, and interest in reliability.',
+  title: 'Projects',
+  description: 'Selected projects that reflect my engineering approach, product thinking, and interest in reliability.',
+  alternates: {
+    canonical: '/projects',
+  },
 };
 
 export default function ProjectsPage() {

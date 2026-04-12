@@ -10,39 +10,34 @@ type BaseProps = {
   variant?: ButtonVariant;
 };
 
-type LinkProps = BaseProps & {
-  href: string;
-  external?: boolean;
-};
+type LinkProps = BaseProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+    href: string;
+    external?: boolean;
+    type?: never;
+    disabled?: never;
+  };
 
-type NativeButtonProps = BaseProps & {
-  href?: never;
-  type?: 'button' | 'submit' | 'reset';
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  disabled?: boolean;
-};
+type NativeButtonProps = BaseProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    href?: never;
+    external?: never;
+  };
 
 type ButtonProps = LinkProps | NativeButtonProps;
 
 export default function Button(props: ButtonProps) {
   const { children, className, variant = 'primary' } = props;
 
-  const buttonClassName = clsx(
-    styles.button,
-    styles[`button--${variant}`],
-    className,
-  );
+  const buttonClassName = clsx(styles.button, styles[`button--${variant}`], className);
 
   if ('href' in props) {
+    const { href, external, ...anchorProps } = props;
+
     // external link
-    if ('external' in props) {
+    if (external) {
       return (
-        <a
-          href={props.href}
-          className={buttonClassName}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={href} className={buttonClassName} target="_blank" rel="noopener noreferrer" {...anchorProps}>
           {children}
         </a>
       );
@@ -50,19 +45,16 @@ export default function Button(props: ButtonProps) {
 
     // internal link
     return (
-      <Link href={props.href!} className={buttonClassName}>
+      <Link href={href!} className={buttonClassName} {...anchorProps}>
         {children}
       </Link>
     );
   }
 
+  const { type = 'button', ...buttonProps } = props;
+
   return (
-    <button
-      type={props.type ?? 'button'}
-      className={buttonClassName}
-      onClick={props.onClick}
-      disabled={props.disabled}
-    >
+    <button type={type} className={buttonClassName} {...buttonProps}>
       {children}
     </button>
   );

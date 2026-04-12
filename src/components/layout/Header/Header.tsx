@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import Container from '../Container/Container';
 import ThemeToggle from '@/design-system/components/ThemeToggle/ThemeToggle';
 import IconButton from '@/design-system/components/IconButton/IconButton';
+import { TrackedLink } from '@/components/analytics/TrackedLink';
 import styles from './Header.module.css';
 
 const navigation = [
@@ -73,9 +74,9 @@ export default function Header() {
     }
 
     return (
-      <Link href={item.href} className={className} onClick={closeMenu}>
+      <TrackedLink href={item.href} label={item.label} className={className} location="header" onClick={closeMenu}>
         {item.label}
-      </Link>
+      </TrackedLink>
     );
   };
 
