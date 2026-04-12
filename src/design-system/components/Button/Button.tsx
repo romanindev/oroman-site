@@ -26,15 +26,16 @@ type NativeButtonProps = BaseProps &
 
 type ButtonProps = LinkProps | NativeButtonProps;
 
+function isLinkProps(props: ButtonProps): props is LinkProps {
+  return 'href' in props;
+}
+
 export default function Button(props: ButtonProps) {
-  const { children, className, variant = 'primary' } = props;
+  if (isLinkProps(props)) {
+    const { children, className, variant = 'primary', href, external, ...anchorProps } = props;
 
-  const buttonClassName = clsx(styles.button, styles[`button--${variant}`], className);
+    const buttonClassName = clsx(styles.button, styles[`button--${variant}`], className);
 
-  if ('href' in props) {
-    const { href, external, ...anchorProps } = props;
-
-    // external link
     if (external) {
       return (
         <a href={href} className={buttonClassName} target="_blank" rel="noopener noreferrer" {...anchorProps}>
@@ -43,15 +44,16 @@ export default function Button(props: ButtonProps) {
       );
     }
 
-    // internal link
     return (
-      <Link href={href!} className={buttonClassName} {...anchorProps}>
+      <Link href={href} className={buttonClassName} {...anchorProps}>
         {children}
       </Link>
     );
   }
 
-  const { type = 'button', ...buttonProps } = props;
+  const { children, className, variant = 'primary', type = 'button', ...buttonProps } = props;
+
+  const buttonClassName = clsx(styles.button, styles[`button--${variant}`], className);
 
   return (
     <button type={type} className={buttonClassName} {...buttonProps}>
