@@ -7,21 +7,7 @@ export function HeroActions() {
   return (
     <>
       <Button
-        href="/experience"
-        onClick={() =>
-          Analytics.trackCta({
-            ctaName: 'experience',
-            location: 'hero',
-            linkUrl: '/experience',
-            label: 'Experience',
-          })
-        }
-      >
-        Experience
-      </Button>
-      <Button
         href="https://www.linkedin.com/in/onishchenko-roman"
-        variant="ghost"
         onClick={() =>
           Analytics.trackCta({
             ctaName: 'linkedin',
@@ -33,6 +19,20 @@ export function HeroActions() {
         external
       >
         Connect on LinkedIn
+      </Button>
+      <Button
+        href="/experience"
+        variant="ghost"
+        onClick={() =>
+          Analytics.trackCta({
+            ctaName: 'experience',
+            location: 'hero',
+            linkUrl: '/experience',
+            label: 'Experience',
+          })
+        }
+      >
+        Experience
       </Button>
     </>
   );

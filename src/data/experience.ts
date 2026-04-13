@@ -16,8 +16,7 @@ export const experienceEntries: ExperienceEntry[] = [
     slug: 'it5',
     role: 'Senior Software Engineer',
     company: 'IT Services & Consulting Company',
-    companyDescription:
-      'Supporting clients from Switzerland and the UK (under NDA)',
+    companyDescription: 'Supporting clients from Switzerland and the UK (under NDA)',
     period: '2021 — 2026',
     location: 'Remote',
     employmentType: 'Full-time / Contract',
@@ -31,15 +30,7 @@ export const experienceEntries: ExperienceEntry[] = [
       'Integrated AWS services (e.g., S3, EC2) into application development and deployment workflows',
       'Increased system reliability by adding test coverage for critical application flows',
     ],
-    skills: [
-      'React',
-      'TypeScript',
-      'Node.js',
-      'Redux Toolkit',
-      'React Query',
-      'API Integration',
-      'AWS / DB',
-    ],
+    skills: ['React', 'TypeScript', 'Node.js', 'Redux Toolkit', 'React Query', 'API Integration', 'AWS / DB'],
   },
   {
     slug: 'it4',
@@ -55,12 +46,7 @@ export const experienceEntries: ExperienceEntry[] = [
       'Built reusable UI components, reducing duplication and speeding up feature delivery',
       'Improved code quality through refactoring',
     ],
-    skills: [
-      'React',
-      'JavaScript',
-      'Node.js',
-      'PostgreSQL'
-    ],
+    skills: ['React', 'Node.js', 'JavaScript', 'PostgreSQL'],
   },
   {
     slug: 'it3',
@@ -75,21 +61,15 @@ export const experienceEntries: ExperienceEntry[] = [
       'Built and maintained frontend features using React and TypeScript, improving user experience and functionality of the application',
       'Optimized rendering and interaction patterns for a smoother reading experience across devices',
       'Wrote unit tests and performed manual testing to ensure stability of core user flows',
-      'Contributed to ongoing improvements of code quality and maintainability within the frontend codebase'
+      'Contributed to ongoing improvements of code quality and maintainability within the frontend codebase',
     ],
-    skills: [
-      'React',
-      'TypeScript',
-      'JavaScript',
-      'Node.js',
-    ],
+    skills: ['React', 'TypeScript', 'Node.js', 'JavaScript'],
   },
   {
     slug: 'it2',
     role: 'Full Stack Developer',
     company: 'Swiss-based client (under NDA)',
-    companyDescription:
-      'All-in-one integrated fundraising platform for nonprofits.',
+    companyDescription: 'All-in-one integrated fundraising platform for nonprofits.',
     period: '2018 — 2019',
     location: 'Remote',
     employmentType: 'Full-time / Contract',
@@ -101,19 +81,14 @@ export const experienceEntries: ExperienceEntry[] = [
       'Implemented UI enhancements, improving usability and overall consistency of the application',
       'Performed minor backend updates in Python to support feature delivery',
     ],
-    skills: [
-      'React',
-      'TypeScript',
-      'JavaScript',
-      'Python',
-      'Node.js',
-    ],
+    skills: ['React', 'TypeScript', 'Node.js', 'JavaScript', 'Python'],
   },
   {
     slug: 'it1',
     role: 'Full Stack Developer',
     company: 'Eltima Software',
-    companyDescription: 'A global technology development company providing premium software solutions for Windows, macOS, Linux, and Android platforms.',
+    companyDescription:
+      'A global technology development company providing premium software solutions for Windows, macOS, Linux, and Android platforms.',
     period: '2013 — 2018',
     location: 'Ukraine',
     employmentType: 'Full-time',
@@ -122,16 +97,8 @@ export const experienceEntries: ExperienceEntry[] = [
       'Built frontend functionality using JavaScript and jQuery, including development of custom plugins to extend UI behavior',
       'Contributed to backend development using PHP and MySQL, supporting data-driven features and integrations',
       'Improved maintainability of legacy code by refactoring existing implementations and introducing more structured approaches',
-      'Collaborated with design and marketing teams to deliver user-facing features aligned with business goals'
+      'Collaborated with design and marketing teams to deliver user-facing features aligned with business goals',
     ],
-    skills: [
-      'React',
-      'JavaScript',
-      'jQuery',
-      'PHP',
-      'Yii',
-      'MySQL',
-      'Photoshop'
-    ],
+    skills: ['React', 'JavaScript', 'jQuery', 'PHP', 'Yii', 'MySQL', 'Photoshop'],
   },
 ];

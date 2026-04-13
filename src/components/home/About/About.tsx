@@ -9,29 +9,18 @@ export function About() {
         <SectionHeading
           eyebrow="About"
           title="Engineering mindset with strong frontend depth"
-          description="Worked on front-end development and full-stack development to create products that are easy to maintain."
+          description="I work across front-end and full-stack development to build products that are easy to maintain."
         />
 
         <div className={styles.content}>
           <p className={styles.lead}>
-            I’m a Senior Software Engineer with a frontend focus and a strong
-            full-stack mindset. I build scalable web products with React,
-            TypeScript, Node.js, and modern engineering practices.
+            I’m a Senior Software Engineer with a frontend focus and a strong full-stack mindset. I build scalable and
+            reliable web systems using React, TypeScript, and Node.js, with a strong focus on architecture and long-term
+            maintainability.
           </p>
 
           <div className={styles.body}>
-            <p>
-              My work is centered around maintainable architecture, clean UI
-              implementation, and reliable delivery. I care about systems that
-              are clear to evolve, easy to reason about, and strong in
-              production.
-            </p>
-
-            <p>
-              This portfolio is not just a resume. It is a curated space for
-              selected work, technical direction, and projects that reflect an
-              engineering-first approach.
-            </p>
+            <p>My work focuses on maintainable architecture, clean UI implementation, and reliable delivery.</p>
           </div>
         </div>
       </div>
