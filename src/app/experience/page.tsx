@@ -23,7 +23,7 @@ export default function ExperiencePage() {
           <SectionHeading
             eyebrow="Experience"
             title="Professional experience shaped by frontend depth and full-stack delivery"
-            description="A curated view of roles, responsibilities, and engineering work across product development, maintainable architecture, and production-ready systems."
+            description="A focused overview of the product work, frontend engineering, and full-stack delivery I’ve contributed to across different client and product environments."
           />
         </div>
         <ExperienceList items={experienceEntries} />
