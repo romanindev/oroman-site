@@ -1,56 +1,49 @@
+import clsx from 'clsx';
 import Section from '@/design-system/components/Section/Section';
 import SectionHeading from '@/design-system/components/SectionHeading/SectionHeading';
 import styles from './Skills.module.css';
 
 const skillGroups = [
   {
-    title: 'Frontend',
+    title: 'Engineering',
+    description: 'Designing scalable systems and building reliable service-to-service communication.',
     items: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'JavaScript',
-      'CSS Modules',
-      'Redux Toolkit',
-      'React Query',
+      'System design',
+      'API design (REST, HTTP)',
+      'Service-to-service communication',
+      'Error handling & reliability',
+      'Performance optimization',
+      'Clean architecture',
     ],
+  },
+  {
+    title: 'Frontend',
+    description: 'Building modern interfaces with strong focus on architecture and user experience.',
+    items: ['React', 'TypeScript', 'Next.js', 'Redux Toolkit', 'React Query', 'MUI / Styled Components'],
   },
   {
     title: 'Backend',
+    description: 'Developing backend services with attention to data flow and system stability.',
     items: [
       'Node.js',
+      'API design (REST)',
       'Express',
-      'REST APIs',
+      'Authentication & authorization',
+      'PostgreSQL / MongoDB',
       'Python',
-      'PostgreSQL',
-      'MongoDB',
-      'Authentication',
-      'API integration',
     ],
   },
   {
-    title: 'Architecture & Delivery',
+    title: 'Infrastructure',
+    description: 'Using cloud and delivery tools to support scalable systems.',
     items: [
-      'Scalable frontend architecture',
-      'Design systems',
-      'Performance optimization',
-      'Maintainability',
-      'Testing strategy',
-      'CI/CD',
-      'GitOps mindset',
-      'Production readiness',
-    ],
-  },
-  {
-    title: 'Tooling',
-    items: [
-      'Git',
       'Docker',
+      'AWS (S3, EC2, Lambda)',
+      'GitHub Actions / CircleCI',
       'Kubernetes',
-      'ESLint',
-      'Prettier',
-      'Husky',
-      'PNPM',
+      'GitOps / Argo CD',
+      'Testing (unit, integration)',
+      'Code quality (ESLint, Prettier, Husky)',
     ],
   },
 ];
@@ -68,11 +61,14 @@ export function Skills() {
         <div className={styles.grid}>
           {skillGroups.map((group) => (
             <article key={group.title} className={styles.card}>
-              <h3 className={styles.cardTitle}>{group.title}</h3>
+              <div className={styles.cardHeader}>
+                <h3 className={styles.cardTitle}>{group.title}</h3>
+                <p className={styles.cardDescription}>{group.description}</p>
+              </div>
 
               <ul className={styles.list}>
-                {group.items.map((item) => (
-                  <li key={item} className={styles.listItem}>
+                {group.items.map((item, index) => (
+                  <li key={item} className={clsx(styles.listItem, index < 2 && styles.listItemStrong)}>
                     {item}
                   </li>
                 ))}

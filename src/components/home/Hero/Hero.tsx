@@ -12,7 +12,7 @@ export function Hero() {
           <h1 className={styles.hero__title}>Building reliable, scalable systems with a frontend focus</h1>
 
           <p className={styles.hero__description}>
-            I specialize in React, TypeScript, and Node.js, with a strong full-stack mindset and focus on performance,
+            I specialize in React, TypeScript, and Node.js, with a strong full-stack mindset and a focus on performance,
             maintainability, and system reliability.
           </p>
 

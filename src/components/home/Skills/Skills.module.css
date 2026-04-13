@@ -17,6 +17,19 @@
   border-radius: var(--radius-lg);
   background: var(--surface);
   box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.cardHeader {
+  display: grid;
+  gap: var(--space-2);
 }
 
 .cardTitle {
@@ -24,6 +37,13 @@
   font-size: var(--text-base);
   line-height: 1.4;
   color: var(--foreground);
+}
+
+.cardDescription {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .list {
@@ -51,6 +71,11 @@
   height: 0.375rem;
   border-radius: 999px;
   background: var(--accent);
+}
+
+.listItemStrong {
+  font-weight: 500;
+  color: var(--foreground);
 }
 
 @media (min-width: 768px) {

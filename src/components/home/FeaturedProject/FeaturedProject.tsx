@@ -14,10 +14,7 @@ const highlights = [
   'Every request follows a clear, controllable lifecycle with full visibility into execution and retries',
 ];
 
-const techStack = [
-  'TypeScript',
-  'Node.js',
-];
+const techStack = ['TypeScript', 'Node.js', 'HTTP'];
 
 export function FeaturedProject() {
   return (
@@ -35,13 +32,15 @@ export function FeaturedProject() {
               <p className={styles.eyebrow}>Open Source</p>
               <h3 className={styles.title}>dfsync</h3>
               <p className={styles.subtitle}>
-                Reliable toolkit for service-to-service communication. Built for backend services, microservices, and internal APIs.
+                A reliable toolkit for service-to-service communication, designed for backend services, microservices,
+                and internal APIs.
               </p>
             </div>
 
             <div className={styles.body}>
               <p className={styles.description}>
-                The first package, <strong>@dfsync/client</strong>, is a lightweight HTTP client built for reliable communication with retries, hooks, and built-in request observability in Node.js.
+                The first package, <strong>@dfsync/client</strong>, is a lightweight HTTP client for Node.js, designed
+                for reliable communication with retries, hooks, and built-in request observability.
               </p>
 
               <div className={styles.block}>
@@ -69,25 +68,14 @@ export function FeaturedProject() {
           </div>
 
           <div className={styles.actions}>
-            <Button
-              href="https://www.npmjs.com/package/@dfsync/client"
-              external
-            >
+            <Button href="https://www.npmjs.com/package/@dfsync/client" external>
               View on NPM
             </Button>
-            <Button
-              href="https://dfsyncjs.github.io/#/docs"
-              variant="secondary"
-              external
-            >
+            <Button href="https://dfsyncjs.github.io/#/docs" variant="secondary" external>
               View Docs
             </Button>
 
-            <Button
-              href="https://github.com/dfsyncjs/dfsync"
-              variant="secondary"
-              external
-            >
+            <Button href="https://github.com/dfsyncjs/dfsync" variant="secondary" external>
               View on GitHub
             </Button>
           </div>

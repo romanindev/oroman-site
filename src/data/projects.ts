@@ -29,12 +29,12 @@ export const projects: ProjectEntry[] = [
     name: 'dfsync',
     eyebrow: 'Open Source',
     summary:
-      'Reliable toolkit for service-to-service communication. Built for backend services, microservices, and internal APIs.',
+      'A reliable toolkit for service-to-service communication, designed for backend services, microservices, and internal APIs.',
     description:
-      'The first package, @dfsync/client, is a lightweight HTTP client built for reliable communication with retries, hooks, and built-in request observability in Node.js.',
+      'The first package, @dfsync/client, is a lightweight HTTP client for Node.js, designed for reliable communication with retries, hooks, and built-in request observability.',
     status: 'Active',
     type: 'Open-source toolkit',
-    stack: ['TypeScript', 'Node.js'],
+    stack: ['TypeScript', 'Node.js', 'HTTP'],
     featured: true,
     links: [
       {
