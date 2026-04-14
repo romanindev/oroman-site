@@ -51,7 +51,7 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Remote',
     employmentType: 'Full-time',
     responsibilities: [
-      'Developed and maintained a CMS platform for data collection and analysis',
+      'Contributed to the development and maintenance of a CMS platform for data collection and analysis',
       'Built reusable UI components that reduced duplication and helped speed up feature delivery.',
       'Simplified legacy frontend flows to reduce duplication and make feature delivery faster and safer',
     ],
@@ -63,10 +63,10 @@ export const experienceEntries: ExperienceEntry[] = [
     company: "Roll'n'Code",
     companyDescription: 'Reading platform for a US client (under NDA)',
     period: '2019 — 2020',
-    location: 'Remote',
+    location: 'Ukraine',
     employmentType: 'Full-time',
     responsibilities: [
-      'Developed and maintained a web-based reading platform, focused on usability and performance of content-heavy pages',
+      'Maintained and improved a web-based reading platform, focusing on usability and performance of content-heavy pages',
       'Built and maintained frontend features using React and TypeScript, improving user experience and extending core product capabilities',
       'Optimized rendering and interaction patterns for a smoother reading experience across devices',
       'Added unit test coverage and manually verified core user flows for stability',
@@ -85,7 +85,7 @@ export const experienceEntries: ExperienceEntry[] = [
     summary:
       'Worked on complex product features, frontend improvements, and ongoing platform evolution in a collaborative engineering environment.',
     responsibilities: [
-      'Developed and maintained a fundraising platform used for managing donation flows and user interactions',
+      'Contributed to the ongoing development of a fundraising platform, supporting donation flows and user interactions',
       'Improved the stability of a legacy React/TypeScript codebase while extending its functionality',
       'Implemented UI enhancements, improving usability and overall consistency of the application',
       'Contributed backend updates in Python to support feature delivery',
@@ -101,7 +101,7 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Ukraine',
     employmentType: 'Full-time',
     responsibilities: [
-      'Developed and maintained company websites and product landing pages, supporting multiple software products and marketing initiatives',
+      'Maintained company websites and product landing pages, supporting multiple software products and marketing initiatives',
       'Built frontend functionality using JavaScript and jQuery, including development of custom plugins to extend UI behavior',
       'Contributed to backend development using PHP and MySQL, supporting data-driven features and integrations',
       'Improved legacy code maintainability through refactoring and more structured code patterns',
