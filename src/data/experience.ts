@@ -52,7 +52,7 @@ export const experienceEntries: ExperienceEntry[] = [
     employmentType: 'Full-time',
     responsibilities: [
       'Contributed to the development and maintenance of a CMS platform for data collection and analysis',
-      'Built reusable UI components that reduced duplication and helped speed up feature delivery.',
+      'Built reusable UI components that reduced duplication and helped speed up feature delivery',
       'Simplified legacy frontend flows to reduce duplication and make feature delivery faster and safer',
     ],
     skills: ['React', 'Node.js', 'JavaScript', 'PostgreSQL'],
