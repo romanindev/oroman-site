@@ -3,6 +3,11 @@ import Section from '@/design-system/components/Section/Section';
 import SectionHeading from '@/design-system/components/SectionHeading/SectionHeading';
 import styles from './Skills.module.css';
 
+const skillsExploring = {
+  title: 'Currently expanding my stack',
+  items: ['Next.js', 'NestJS', 'GraphQL'],
+};
+
 const skillGroups = [
   {
     title: 'Engineering',
@@ -19,7 +24,7 @@ const skillGroups = [
   {
     title: 'Frontend',
     description: 'Building modern interfaces with strong focus on architecture and user experience.',
-    items: ['React', 'TypeScript', 'Next.js', 'Redux Toolkit', 'React Query', 'MUI / Styled Components'],
+    items: ['React', 'TypeScript', 'Redux Toolkit', 'React Query', 'MUI / Styled Components'],
   },
   {
     title: 'Backend',
@@ -76,6 +81,22 @@ export function Skills() {
             </article>
           ))}
         </div>
+        <article className={styles.exploringCard}>
+          <div>
+            <h3 className={styles.exploringTitle}>{skillsExploring.title}</h3>
+            <p className={styles.exploringDescription}>
+              Technologies I’m currently integrating into my full-stack workflow.
+            </p>
+          </div>
+
+          <ul className={styles.exploringList}>
+            {skillsExploring.items.map((item) => (
+              <li key={item} className={styles.exploringItem}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </article>
       </div>
     </Section>
   );
