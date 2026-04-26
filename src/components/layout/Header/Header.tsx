@@ -2,13 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 import Container from '../Container/Container';
 import ThemeToggle from '@/design-system/components/ThemeToggle/ThemeToggle';
 import IconButton from '@/design-system/components/IconButton/IconButton';
 import { TrackedLink } from '@/components/analytics/TrackedLink';
+import { Logo } from './Logo';
 import styles from './Header.module.css';
 
 const navigation = [
@@ -60,8 +60,6 @@ export default function Header() {
     closeMenu();
   };
 
-  const Logo = <Image className={styles.logo} src="/logo.png" alt="logo" width={52} height={52} />;
-
   const renderNavLink = (item: { href: string; label: string }, className: string) => {
     const isHomeAnchor = item.href.startsWith('/#');
 
@@ -85,11 +83,11 @@ export default function Header() {
       <Container className={styles.header__inner}>
         {isHomePage ? (
           <button type="button" onClick={handleScrollToTop} className={styles.logo} aria-label="Scroll to top">
-            {Logo}
+            <Logo />
           </button>
         ) : (
           <Link href="/" className={styles.logo}>
-            {Logo}
+            <Logo />
           </Link>
         )}
 
