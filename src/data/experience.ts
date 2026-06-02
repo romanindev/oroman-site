@@ -17,7 +17,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Senior Software Engineer',
     company: 'N-iX',
     companyDescription: 'Swiss and UK client engagements (under NDA)',
-    period: '2021 — 2026',
+    period: 'Aug 2021 – Apr 2026',
     location: 'Remote',
     employmentType: 'Full-time',
     responsibilities: [
@@ -47,7 +47,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Senior Software Engineer',
     company: 'Software Development Hub',
     companyDescription: 'CMS and analytics platform',
-    period: '2020 — 2021',
+    period: 'Sep 2020 – Aug 2021',
     location: 'Remote',
     employmentType: 'Full-time',
     responsibilities: [
@@ -62,7 +62,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Frontend Developer',
     company: "Roll'n'Code",
     companyDescription: 'Reading platform for a US client (under NDA)',
-    period: '2019 — 2020',
+    period: 'Nov 2019 – Oct 2020',
     location: 'Ukraine',
     employmentType: 'Full-time',
     responsibilities: [
@@ -79,7 +79,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Full Stack Developer',
     company: 'RaiseNow',
     companyDescription: 'Swiss fundraising platform',
-    period: '2018 — 2019',
+    period: 'Jul 2018 – Oct 2019',
     location: 'Remote',
     employmentType: 'Full-time',
     summary:
@@ -97,7 +97,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Full Stack Developer',
     company: 'Eltima Software',
     companyDescription: 'Software product company developing solutions for Windows, macOS, Linux, and Android.',
-    period: '2013 — 2018',
+    period: 'Jan 2013 – Jul 2018',
     location: 'Ukraine',
     employmentType: 'Full-time',
     responsibilities: [
