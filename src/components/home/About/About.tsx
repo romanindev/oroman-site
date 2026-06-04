@@ -14,13 +14,16 @@ export function About() {
 
         <div className={styles.content}>
           <p className={styles.lead}>
-            I’m a Senior Software Engineer with a frontend focus and a strong full-stack mindset. I build scalable and
-            reliable web systems using React, TypeScript, and Node.js, with a strong focus on architecture and long-term
-            maintainability.
+            I’m a Senior Software Engineer with 12+ years of commercial experience, focused mainly on frontend
+            engineering with React and TypeScript, while also working across Node.js APIs, integrations, cloud services,
+            and system design.
           </p>
 
           <div className={styles.body}>
-            <p>My work focuses on maintainable architecture, clean UI implementation, and reliable delivery.</p>
+            <p>
+              I’m comfortable working with legacy codebases, introducing better engineering practices step by step, and
+              using modern AI-assisted tools to support codebase analysis, refactoring, documentation, and delivery.
+            </p>
           </div>
         </div>
       </div>
