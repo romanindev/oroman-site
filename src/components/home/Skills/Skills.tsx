@@ -5,7 +5,7 @@ import styles from './Skills.module.css';
 
 const skillsExploring = {
   title: 'Currently expanding my stack',
-  items: ['Next.js', 'NestJS', 'GraphQL'],
+  items: ['NestJS', 'GraphQL'],
 };
 
 const skillGroups = [
@@ -19,12 +19,13 @@ const skillGroups = [
       'Error handling & reliability',
       'Performance optimization',
       'Clean architecture',
+      'AI-assisted engineering',
     ],
   },
   {
     title: 'Frontend',
     description: 'Building modern interfaces with strong focus on architecture and user experience.',
-    items: ['React', 'TypeScript', 'Redux Toolkit', 'React Query', 'MUI / Styled Components'],
+    items: ['React', 'TypeScript', 'Next.js', 'Redux Toolkit', 'React Query', 'MUI / Styled Components'],
   },
   {
     title: 'Backend',

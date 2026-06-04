@@ -86,6 +86,36 @@ export const projects: ProjectEntry[] = [
       },
     ],
   },
+  {
+    slug: 'aiassistant',
+    name: 'AI Debug Assistant',
+    eyebrow: 'Open Source',
+    summary: 'A pet project focused on exploring AI-assisted debugging workflows for developers.',
+    description:
+      'The project uses a React and TypeScript frontend with a NestJS backend and OpenAI structured outputs. It is focused on turning error reports, stack traces, and debugging context into structured suggestions for developers.',
+    status: 'Active',
+    type: 'Pet project',
+    stack: ['React', 'TypeScript', 'NestJS', 'OpenAI API', 'Zod', 'Docker'],
+    featured: false,
+    links: [
+      {
+        label: 'View on GitHub',
+        href: 'https://github.com/romanindev/ai-debug-assistant',
+      },
+    ],
+    sections: [
+      {
+        title: 'What it demonstrates',
+        items: [
+          'Practical AI/LLM integration in a developer tool',
+          'React + TypeScript frontend architecture',
+          'NestJS backend API design',
+          'Structured outputs and schema validation',
+          'Product thinking around developer experience',
+        ],
+      },
+    ],
+  },
 ];
 
 export function getProjectBySlug(slug: string) {
