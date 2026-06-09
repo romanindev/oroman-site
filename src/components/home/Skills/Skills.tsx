@@ -55,7 +55,7 @@ const skillGroups = [
   {
     title: 'Infrastructure',
     description: 'Using cloud and delivery tools to support scalable systems.',
-    items: ['Docker', 'AWS', 'Git', 'GitHub Actions', 'CI/CD'],
+    items: ['Docker', 'AWS', 'Git', 'GitHub Actions', 'CI/CD', 'Code quality (ESLint, Prettier, Husky)'],
   },
 ];
 
