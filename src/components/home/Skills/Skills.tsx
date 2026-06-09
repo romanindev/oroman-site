@@ -5,7 +5,7 @@ import styles from './Skills.module.css';
 
 const skillsExploring = {
   title: 'Currently expanding my stack',
-  items: ['NestJS', 'GraphQL'],
+  items: ['Kubernetes', 'Terraform'],
 };
 
 const skillGroups = [
@@ -19,13 +19,23 @@ const skillGroups = [
       'Error handling & reliability',
       'Performance optimization',
       'Clean architecture',
-      'AI-assisted engineering',
+      'AI-assisted development workflows',
     ],
   },
   {
     title: 'Frontend',
     description: 'Building modern interfaces with strong focus on architecture and user experience.',
-    items: ['React', 'TypeScript', 'Next.js', 'Redux Toolkit', 'React Query', 'MUI / Styled Components'],
+    items: [
+      'React',
+      'TypeScript',
+      'JavaScript',
+      'Next.js',
+      'Redux Toolkit',
+      'React Query',
+      'Jest/Vitest',
+      'Playwright',
+      'MUI / Styled Components',
+    ],
   },
   {
     title: 'Backend',
@@ -34,23 +44,18 @@ const skillGroups = [
       'Node.js',
       'API design (REST)',
       'Express',
+      'NestJS',
       'Authentication & authorization',
-      'PostgreSQL / MongoDB',
+      'PostgreSQL',
+      'MongoDB',
+      'GraphQL',
       'Python',
     ],
   },
   {
     title: 'Infrastructure',
     description: 'Using cloud and delivery tools to support scalable systems.',
-    items: [
-      'Docker',
-      'AWS (S3, EC2, Lambda)',
-      'GitHub Actions / CircleCI',
-      'Kubernetes',
-      'GitOps / Argo CD',
-      'Testing (unit, integration)',
-      'Code quality (ESLint, Prettier, Husky)',
-    ],
+    items: ['Docker', 'AWS', 'Git', 'GitHub Actions', 'CI/CD', 'Code quality (ESLint, Prettier, Husky)'],
   },
 ];
 
