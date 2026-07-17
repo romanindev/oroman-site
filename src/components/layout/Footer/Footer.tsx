@@ -12,7 +12,7 @@ const links = [
   },
   {
     href: 'https://x.com/boredexill',
-    label: 'X',
+    label: 'Twitter / X',
   },
 ];
 
