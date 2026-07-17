@@ -5,7 +5,7 @@ import styles from './Skills.module.css';
 
 const skillsExploring = {
   title: 'Currently expanding my stack',
-  items: ['Kubernetes', 'Terraform'],
+  items: ['NestJS', 'Kubernetes', 'Terraform'],
 };
 
 const skillGroups = [
@@ -32,9 +32,10 @@ const skillGroups = [
       'Next.js',
       'Redux Toolkit',
       'React Query',
-      'Jest/Vitest',
+      'Jest, Vitest',
       'Playwright',
-      'MUI / Styled Components',
+      'MUI, Styled Components',
+      'Tailwind CSS',
     ],
   },
   {
@@ -44,7 +45,6 @@ const skillGroups = [
       'Node.js',
       'API design (REST)',
       'Express',
-      'NestJS',
       'Authentication & authorization',
       'PostgreSQL',
       'MongoDB',
