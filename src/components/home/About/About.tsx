@@ -21,10 +21,7 @@ export function About() {
 
           <div className={styles.body}>
             <p>I also hold an MSc in Computer Science, specializing in Software Engineering.</p>
-            <p>
-              I’m comfortable working with legacy codebases, introducing better engineering practices step by step, and
-              using modern AI-assisted tools to support codebase analysis, refactoring, documentation, and delivery.
-            </p>
+            <p>I’m comfortable working with legacy codebases, introducing better engineering practices step by step.</p>
           </div>
         </div>
       </div>

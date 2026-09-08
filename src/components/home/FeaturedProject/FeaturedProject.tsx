@@ -22,7 +22,7 @@ export function FeaturedProject() {
       <div className={styles.featuredProject}>
         <SectionHeading
           eyebrow="Projects"
-          title="Featured Project"
+          title="Featured Open-Source Project"
           description="A closer look at projects that reflect my engineering approach, product thinking, and interest in reliability."
         />
 

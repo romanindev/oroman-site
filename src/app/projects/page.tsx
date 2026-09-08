@@ -23,7 +23,7 @@ export default function ProjectsPage() {
             <div className={styles.hero}>
               <SectionHeading
                 eyebrow="Projects"
-                title="Selected work and open-source projects"
+                title="Featured Open-Source Projects"
                 description="A focused view of projects that reflect how I approach engineering, architecture, and production-ready delivery."
               />
             </div>
