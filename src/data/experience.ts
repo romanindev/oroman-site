@@ -40,7 +40,6 @@ export const experienceEntries: ExperienceEntry[] = [
       'PostgreSQL',
       'MongoDB',
       'API Integration',
-      'Claude Code',
     ],
   },
   {

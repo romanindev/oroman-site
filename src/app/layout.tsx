@@ -13,11 +13,11 @@ import styles from './layout.module.css';
 export const metadata: Metadata = {
   metadataBase: new URL(publicConfig.baseUrl),
   title: {
-    default: 'Roman Onishchenko | Software Engineer',
+    default: 'Roman Onishchenko | Senior Frontend & Full-Stack Engineer',
     template: '%s | Roman Onishchenko',
   },
   description:
-    'Personal portfolio of a Senior Software Engineer focused on React, TypeScript, Node.js, full-stack engineering, and open-source.',
+    'Personal portfolio of a Senior Software Engineer focused on React, TypeScript, Node.js, full-stack engineering.',
   alternates: {
     canonical: '/',
   },

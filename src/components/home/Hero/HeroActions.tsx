@@ -13,11 +13,11 @@ export function HeroActions() {
             ctaName: 'experience',
             location: 'hero',
             linkUrl: '/experience',
-            label: 'Experience',
+            label: 'View Experience',
           })
         }
       >
-        Experience
+        View Experience
       </Button>
       <Button
         href="https://www.linkedin.com/in/onishchenko-roman"
