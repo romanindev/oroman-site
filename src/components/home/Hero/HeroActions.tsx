@@ -27,12 +27,12 @@ export function HeroActions() {
             ctaName: 'linkedin',
             location: 'hero',
             linkUrl: 'https://www.linkedin.com/in/onishchenko-roman',
-            label: 'Connect on LinkedIn',
+            label: 'LinkedIn',
           })
         }
         external
       >
-        Connect on LinkedIn
+        LinkedIn
       </Button>
     </>
   );
