@@ -17,7 +17,6 @@ export function Hero() {
             refactoring, documentation, and reviews, while expanding hands-on experience with LLM, RAG, and agentic AI
             integrations.
           </p>
-          <p className={styles.hero__description}>Remote from Poland · Open to B2B opportunities</p>
 
           <div className={styles.hero__actions}>
             <HeroActions />
