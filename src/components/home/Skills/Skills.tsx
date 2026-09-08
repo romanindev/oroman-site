@@ -10,19 +10,6 @@ const skillsExploring = {
 
 const skillGroups = [
   {
-    title: 'Engineering',
-    description: 'Designing scalable systems and building reliable service-to-service communication.',
-    items: [
-      'System design',
-      'API design (REST, HTTP)',
-      'Service-to-service communication',
-      'Error handling & reliability',
-      'Performance optimization',
-      'Clean architecture',
-      'AI-assisted development workflows',
-    ],
-  },
-  {
     title: 'Frontend',
     description: 'Building modern interfaces with strong focus on architecture and user experience.',
     items: [
@@ -32,9 +19,9 @@ const skillGroups = [
       'Next.js',
       'Redux Toolkit',
       'React Query',
-      'Jest, Vitest',
-      'Playwright',
-      'MUI, Styled Components',
+      'Jest, Playwright',
+      'MUI',
+      'Styled Components',
       'Tailwind CSS',
     ],
   },
@@ -49,7 +36,20 @@ const skillGroups = [
       'PostgreSQL',
       'MongoDB',
       'GraphQL',
-      'Python',
+      'Basic Python',
+    ],
+  },
+  {
+    title: 'Engineering',
+    description: 'Designing scalable systems and building reliable service-to-service communication.',
+    items: [
+      'System design',
+      'API design (REST, HTTP)',
+      'Service-to-service communication',
+      'Error handling & reliability',
+      'Performance optimization',
+      'Clean architecture',
+      'AI Engineering (learning & practical integration), LLMs, RAG, AI agents, AI integrations, Claude Code',
     ],
   },
   {
